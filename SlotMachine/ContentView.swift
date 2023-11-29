@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     
+    @State private var showingInfoView: Bool = false
+    
     // MARK: - BODY
     
     var body: some View {
@@ -29,29 +31,118 @@ struct ContentView: View {
                 
                 // MARK: - SCORE
                 HStack {
-                    Text("Your\nCoins".uppercased())
-                        .foregroundStyle(Color.white)
-                        .font(.system(size: 10, weight: .bold, design: .rounded))
+                    HStack {
+                        Text("Your\nCoins".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.trailing)
+                        
+                        Text("100")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                    }
+                    .modifier(ScoreContainerModifier())
                     
-                    Text("100")
-                        .foregroundStyle(Color.white)
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.heavy)
-                        .shadow(color: Color("ColorTransparentBlack"), radius: 0, x: 0, y: 3)
-                        .layoutPriority(1)
+                    Spacer()
+                    
+                    HStack {
+                        Text("200")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                        
+                        Text("High\nScore".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.leading)
+                    }
+                    .modifier(ScoreContainerModifier())
                 }
-                .padding(.vertical, 4)
-                .padding(.horizontal, 16)
-                .frame(minWidth: 128)
-                .background(
-                    Capsule()
-                        .foregroundStyle(Color("ColorTransparentBlack"))
-                )
                 
                 // MARK: - SLOT MACHINE
+                
+                VStack(alignment: .center, spacing: 0) {
+                    // MARK: - REEL #1
+                    ZStack {
+                        ReelView()
+                        Image("gfx-bell")
+                            .resizable()
+                            .modifier(ImageModifier())
+                    }
+                    
+                    HStack (alignment: .center, spacing: 0) {
+                        // MARK: - REEL #2
+                        ZStack {
+                            ReelView()
+                            Image("gfx-seven")
+                                .resizable()
+                                .modifier(ImageModifier())
+                        }
+                        
+                        Spacer()
+                        
+                        // MARK: - REEL #3
+                        ZStack {
+                            ReelView()
+                            Image("gfx-cherry")
+                                .resizable()
+                                .modifier(ImageModifier())
+                        }
+                    }
+                    .frame(maxWidth: 500)
+                    
+                    // MARK: - SPIN BUTTON
+                    Button(action: {
+                        print("Spin the reels")
+                    }) {
+                        Image("gfx-spin")
+                            .renderingMode(.original)
+                            .resizable()
+                            .modifier(ImageModifier())
+                    }
+                    
+                } //: SLOT MACHINE
+                .layoutPriority(2)
+                
                 // MARK: - FOOTER
                 
                 Spacer()
+                
+                HStack {
+                    // MARK: - - BET 20
+                    HStack(alignment: .center, spacing: 10) {
+                        Button(action: {
+                            print("Bet 20 coins")
+                        }) {
+                            Text("20")
+                                .fontWeight(.heavy)
+                                .foregroundStyle(Color.white)
+                                .modifier(BetNumberModifier())
+                        }
+                        .modifier(BetCapsuleModifier())
+                        
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(0)
+                            .modifier(CasinoChipsModifier())
+                    }
+                    
+                    // MARK: - - BET 10
+                    HStack(alignment: .center, spacing: 10) {
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(1)
+                            .modifier(CasinoChipsModifier())
+                        
+                        Button(action: {
+                            print("Bet 10 coins")
+                        }) {
+                            Text("10")
+                                .fontWeight(.heavy)
+                                .foregroundStyle(Color.yellow)
+                                .modifier(BetNumberModifier())
+                        }
+                        .modifier(BetCapsuleModifier())
+                        
+                    }
+                }
             }
             // MARK: - BUTTONS
             .overlay(
@@ -67,7 +158,7 @@ struct ContentView: View {
             .overlay(
                 // INFO
                 Button(action: {
-                    print("Info View")
+                    self.showingInfoView = true
                 }) {
                     Image(systemName: "info.circle")
                 }
@@ -79,6 +170,9 @@ struct ContentView: View {
             
             // MARK: - POPUP
         } //: ZSTACK
+        .sheet(isPresented: $showingInfoView) {
+            InfoView()
+        }
     }
 }
 

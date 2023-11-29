@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F14B8512B1731180016CAF4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14B8502B1731180016CAF4 /* InfoView.swift */; };
 		7F6CE9E32B15F472002FDF70 /* SlotMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CE9E22B15F472002FDF70 /* SlotMachineApp.swift */; };
 		7F6CE9E52B15F472002FDF70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CE9E42B15F472002FDF70 /* ContentView.swift */; };
 		7F6CE9E72B15F473002FDF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6CE9E62B15F473002FDF70 /* Assets.xcassets */; };
@@ -22,9 +23,12 @@
 		7F6CEA042B15F71B002FDF70 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6CEA032B15F71B002FDF70 /* Launch Screen.storyboard */; };
 		7F6CEA062B15FCDF002FDF70 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CEA052B15FCDF002FDF70 /* LogoView.swift */; };
 		7F6CEA082B15FD0F002FDF70 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CEA072B15FD0F002FDF70 /* Modifiers.swift */; };
+		7F6CEA0A2B160220002FDF70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CEA092B160220002FDF70 /* Extensions.swift */; };
+		7F6CEA0C2B1604BB002FDF70 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CEA0B2B1604BB002FDF70 /* ReelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F14B8502B1731180016CAF4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = SlotMachine/InfoView.swift; sourceTree = SOURCE_ROOT; };
 		7F6CE9DF2B15F472002FDF70 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6CE9E22B15F472002FDF70 /* SlotMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineApp.swift; sourceTree = "<group>"; };
 		7F6CE9E42B15F472002FDF70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 		7F6CEA032B15F71B002FDF70 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7F6CEA052B15FCDF002FDF70 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoView.swift; path = SlotMachine/LogoView.swift; sourceTree = SOURCE_ROOT; };
 		7F6CEA072B15FD0F002FDF70 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Modifiers.swift; path = SlotMachine/Views/Modifiers.swift; sourceTree = SOURCE_ROOT; };
+		7F6CEA092B160220002FDF70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SlotMachine/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		7F6CEA0B2B1604BB002FDF70 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReelView.swift; path = SlotMachine/ReelView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 		7F6CEA012B15F5FE002FDF70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F14B8502B1731180016CAF4 /* InfoView.swift */,
+				7F6CEA0B2B1604BB002FDF70 /* ReelView.swift */,
 				7F6CEA052B15FCDF002FDF70 /* LogoView.swift */,
 			);
 			path = Views;
@@ -119,6 +127,7 @@
 		7F6CEA022B15F607002FDF70 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7F6CEA092B160220002FDF70 /* Extensions.swift */,
 				7F6CEA072B15FD0F002FDF70 /* Modifiers.swift */,
 			);
 			path = Helpers;
@@ -203,10 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6CEA0C2B1604BB002FDF70 /* ReelView.swift in Sources */,
+				7F6CEA0A2B160220002FDF70 /* Extensions.swift in Sources */,
 				7F6CEA082B15FD0F002FDF70 /* Modifiers.swift in Sources */,
 				7F6CE9E52B15F472002FDF70 /* ContentView.swift in Sources */,
 				7F6CEA062B15FCDF002FDF70 /* LogoView.swift in Sources */,
 				7F6CE9E32B15F472002FDF70 /* SlotMachineApp.swift in Sources */,
+				7F14B8512B1731180016CAF4 /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
