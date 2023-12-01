@@ -49,6 +49,7 @@
 		7F6CEA092B160220002FDF70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SlotMachine/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		7F6CEA0B2B1604BB002FDF70 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReelView.swift; path = SlotMachine/ReelView.swift; sourceTree = SOURCE_ROOT; };
 		7F6FEF052B18B9C1007DDC8C /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaySound.swift; path = SlotMachine/PlaySound.swift; sourceTree = SOURCE_ROOT; };
+		7F6FEF072B18BE2A007DDC8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		7F6CE9E12B15F472002FDF70 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				7F6FEF072B18BE2A007DDC8C /* Info.plist */,
 				7F6CEA032B15F71B002FDF70 /* Launch Screen.storyboard */,
 				7F6CE9E42B15F472002FDF70 /* ContentView.swift */,
 				7F6CE9E22B15F472002FDF70 /* SlotMachineApp.swift */,
@@ -359,12 +361,13 @@
 				DEVELOPMENT_TEAM = EPMT7DEL43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlotMachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,12 +392,13 @@
 				DEVELOPMENT_TEAM = EPMT7DEL43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlotMachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
